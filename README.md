@@ -39,7 +39,7 @@ bash pseduo_mask_gen.sh
 ```
 ### Preparation
 
-* Referring [examples/README.md](https://github.com/Vibashan/ovis_trail/blob/main/examples/README.md) for data preparation
+* Referring [examples/README.md](https://github.com/Vibashan/Mask-free-OVIS/blob/main/examples/README.md) for data preparation
 
 ### Generate Pseudo-mask
 * Get pseudo labels based on [ALBEF](https://arxiv.org/abs/2107.07651) and generated pseudo-mask are available [here](https://github.com/Vibashan/ovis_trail/tree/main/pseudo_label_output/vis)
@@ -86,7 +86,7 @@ perl -i -pe 's/AT_CHECK/TORCH_CHECK/' $cuda_dir/deform_pool_cuda.cu $cuda_dir/de
 python setup.py build develop
 ```
 ### Data Preparation
-* Follow steps in [datasets/README.md](https://github.com/Vibashan/ovis_trail/blob/main/datasets/README.md) for data preparation
+* Follow steps in [datasets/README.md](https://github.com/Vibashan/Mask-free-OVIS/blob/main/datasets/README.md) for data preparation
 
 ### Pretrain with Pseudo-Labels
 ```angular2
