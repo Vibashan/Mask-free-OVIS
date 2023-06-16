@@ -42,7 +42,7 @@ bash pseduo_mask_gen.sh
 * Referring [examples/README.md](https://github.com/Vibashan/Mask-free-OVIS/blob/main/examples/README.md) for data preparation
 
 ### Generate Pseudo-mask
-* Get pseudo labels based on [ALBEF](https://arxiv.org/abs/2107.07651) and generated pseudo-mask are available [here](https://github.com/Vibashan/ovis_trail/tree/main/pseudo_label_output/vis)
+* Get pseudo labels based on [ALBEF](https://arxiv.org/abs/2107.07651) and generated pseudo-mask are available [here](https://github.com/Vibashan/Mask-free-OVIS/tree/main/pseudo_label_output/vis)
 
 ```angular2
 python pseudo_mask_generator.py
