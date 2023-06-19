@@ -2,7 +2,7 @@
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) 
 
-[[`Project Page`](https://vibashan.github.io/mask-free-ovis-web/)] [[`arXiv`](https://arxiv.org/abs/2303.16891)] [[`PDF`](https://openaccess.thecvf.com/content/CVPR2023/papers/VS_Mask-Free_OVIS_Open-Vocabulary_Instance_Segmentation_Without_Manual_Mask_Annotations_CVPR_2023_paper.pdf)]  [[`BibTeX`](https://github.com/Vibashan/irg-sfda/blob/main/reference.bib)] 
+[[`Project Page`](https://vibashan.github.io/mask-free-ovis-web/)] [[`arXiv`](https://arxiv.org/abs/2303.16891)] [[`PDF`](https://openaccess.thecvf.com/content/CVPR2023/papers/VS_Mask-Free_OVIS_Open-Vocabulary_Instance_Segmentation_Without_Manual_Mask_Annotations_CVPR_2023_paper.pdf)] [[`Suppli`](https://openaccess.thecvf.com/content/CVPR2023/supplemental/VS_Mask-Free_OVIS_Open-Vocabulary_CVPR_2023_supplemental.pdf)] [[`Slides`](https://docs.google.com/presentation/d/1VDJkCr5duzretJegbohLiRn0PBRsry3T/edit?usp=sharing&ouid=115004586392986149446&rtpof=true&sd=true)]  [[`BibTeX`](https://github.com/Vibashan/irg-sfda/blob/main/reference.bib)] 
 
 <p align="center">
   <img src="figs/ovis-gif5.gif" width="800"/>
