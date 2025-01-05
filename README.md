@@ -101,7 +101,18 @@ python -m torch.distributed.launch --nproc_per_node=8 tools/train_net.py  --dist
 ```
 
 ### Inference
-'Coming Soon...!!!'
+To perform inference using the Mask-Free OVIS checkpoints, follow these steps:
+
+1. Download the checkpoints from the link below:
+   [Mask-Free OVIS Checkpoints](https://drive.google.com/drive/folders/1kkbzLo7-K30WqphQrAJyaAEWqHgRcxyx?usp=sharing)
+
+2. Run the inference command:
+
+```bash
+python tools/test_net.py --config-file configs/eval.yaml MODEL.WEIGHT $CHECKPOINT_PATH OUTPUT_DIR $OUTPUT_DIR
+```
+
+Replace `$CHECKPOINT_PATH` with the path to the downloaded checkpoint file and `$OUTPUT_DIR` with the desired output directory.
 
 ## Citation
 
