@@ -2,7 +2,7 @@
 
 [![Framework: PyTorch](https://img.shields.io/badge/Framework-PyTorch-orange.svg)](https://pytorch.org/) 
 
-[[`Project Page`](https://vibashan.github.io/ovis-web/)] [[`arXiv`](https://arxiv.org/abs/2303.16891)] [[`PDF`](https://openaccess.thecvf.com/content/CVPR2023/papers/VS_Mask-Free_OVIS_Open-Vocabulary_Instance_Segmentation_Without_Manual_Mask_Annotations_CVPR_2023_paper.pdf)] [[`Suppli`](https://openaccess.thecvf.com/content/CVPR2023/supplemental/VS_Mask-Free_OVIS_Open-Vocabulary_CVPR_2023_supplemental.pdf)] [[`Slides`](https://docs.google.com/presentation/d/1VDJkCr5duzretJegbohLiRn0PBRsry3T/edit?usp=sharing&ouid=115004586392986149446&rtpof=true&sd=true)]  [[`BibTeX`](https://github.com/Vibashan/irg-sfda/blob/main/reference.bib)] 
+[[`Project Page`](https://vibashan.github.io/ovis-web/)] [[`arXiv`](https://arxiv.org/abs/2303.16891)] [[`PDF`](https://openaccess.thecvf.com/content/CVPR2023/papers/VS_Mask-Free_OVIS_Open-Vocabulary_Instance_Segmentation_Without_Manual_Mask_Annotations_CVPR_2023_paper.pdf)] [[`Supplemental`](https://openaccess.thecvf.com/content/CVPR2023/supplemental/VS_Mask-Free_OVIS_Open-Vocabulary_CVPR_2023_supplemental.pdf)] [[`Slides`](https://docs.google.com/presentation/d/1VDJkCr5duzretJegbohLiRn0PBRsry3T/edit?usp=sharing&ouid=115004586392986149446&rtpof=true&sd=true)]  [[`BibTeX`](https://github.com/Vibashan/irg-sfda/blob/main/reference.bib)] 
 
 <p align="center">
   <img src="figs/ovis-gif5.gif" width="800"/>
@@ -29,13 +29,12 @@ CUDNN="8"
 </p>
 
 ### Installation
-
 ```angular2
-conda create --name pseduo_mask_gen
+conda create --name pseudo_mask_gen
 
-conda activate pseduo_mask_gen
+conda activate pseudo_mask_gen
 
-bash pseduo_mask_gen.sh
+bash pseudo_mask_gen.sh
 ```
 ### Preparation
 
@@ -43,7 +42,6 @@ bash pseduo_mask_gen.sh
 
 ### Generate Pseudo-mask
 * Get pseudo labels based on [ALBEF](https://arxiv.org/abs/2107.07651) and generated pseudo-mask are available [here](https://github.com/Vibashan/Mask-free-OVIS/tree/main/pseudo_label_output/vis)
-
 ```angular2
 python pseudo_mask_generator.py
 ```
@@ -54,7 +52,6 @@ python prepare_coco_dataset.py
 ```
 
 * Extract text embedding using [CLIP](https://arxiv.org/abs/2103.00020)
-
 ```angular2
 # pip install git+https://github.com/openai/CLIP.git
 
@@ -62,7 +59,6 @@ python prepare_clip_embedding_for_open_vocab.py
 ```
 
 * Check your final pseudo-mask by visualization
-
 ```angular2
 python visualize_coco_style_dataset.py
 ```
@@ -91,7 +87,7 @@ python setup.py build develop
 ### Pretrain with Pseudo-Labels
 ```angular2
 python -m torch.distributed.launch --nproc_per_node=8 tools/train_net.py  --distributed \
---config-file configs/pretrain_pseduo_mask.yaml OUTPUT_DIR $OUTPUT_DIR
+--config-file configs/pretrain_pseudo_mask.yaml OUTPUT_DIR $OUTPUT_DIR
 ```
 
 ### Finetune
@@ -107,7 +103,6 @@ To perform inference using the Mask-Free OVIS checkpoints, follow these steps:
    [Mask-Free OVIS Checkpoints](https://drive.google.com/drive/folders/1kkbzLo7-K30WqphQrAJyaAEWqHgRcxyx?usp=sharing)
 
 2. Run the inference command:
-
 ```bash
 python tools/test_net.py --config-file configs/eval.yaml MODEL.WEIGHT $CHECKPOINT_PATH OUTPUT_DIR $OUTPUT_DIR
 ```
@@ -117,7 +112,6 @@ Replace `$CHECKPOINT_PATH` with the path to the downloaded checkpoint file and `
 ## Citation
 
 If you found Mask-free OVIS useful in your research, please consider starring ⭐ us on GitHub and citing 📚 us in your research!
-
 ```bibtex
 @inproceedings{vs2023mask,
   title={Mask-free OVIS: Open-Vocabulary Instance Segmentation without Manual Mask Annotations},
@@ -130,4 +124,4 @@ If you found Mask-free OVIS useful in your research, please consider starring �
 
 ## Acknowledgement
 
-The codebase is build on top of [PB-OVD](https://github.com/salesforce/PB-OVD), [CMPL](https://github.com/hbdat/cvpr22_cross_modal_pseudo_labeling/tree/main) and [Wetectron](https://github.com/NVlabs/wetectron).
+The codebase is built on top of [PB-OVD](https://github.com/salesforce/PB-OVD), [CMPL](https://github.com/hbdat/cvpr22_cross_modal_pseudo_labeling/tree/main) and [Wetectron](https://github.com/NVlabs/wetectron).
